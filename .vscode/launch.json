@@ -1,13 +1,10 @@
-
-
-
 {
     "version": "0.2.0",
     "configurations": [
         {
             "name": "Pico Debug",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/build/src/rp2040-freertos-template.elf",
+            "executable": "${command:cmake.launchTargetPath}",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
