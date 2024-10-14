@@ -12,3 +12,6 @@ target_link_libraries(${ProjectName}
     )
 
 pico_add_extra_outputs(${ProjectName})
+
+pico_enable_stdio_uart(${ProjectName} 1)
+pico_enable_stdio_usb(${ProjectName} 0)
