@@ -10,7 +10,7 @@ int main(){
 
     printf("Programa Blink-LED FreeRTOS \n");
 
-    xTaskCreate(led_task, "LED_Task", 256, NULL, 1, NULL);
+    xTaskCreateAffinitySet(led_task,"LED_TASK", 256, NULL, 1, tskNO_AFFINITY, NULL);
     vTaskStartScheduler();
 
     while(1){
